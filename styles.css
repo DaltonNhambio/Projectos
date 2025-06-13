@@ -1,0 +1,294 @@
+
+:root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #00a8ff;
+            --light: #e6f7ff;
+            --text: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: var(--accent);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--highlight);
+        }
+        
+        .logo span {
+            color: var(--light);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--highlight);
+        }
+        
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-login {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--highlight);
+            margin-right: 1rem;
+        }
+        
+        .btn-login:hover {
+            background: var(--highlight);
+        }
+        
+        .btn-register {
+            background: var(--highlight);
+            color: var(--primary);
+        }
+        
+        .btn-register:hover {
+            background: #0095e6;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-deposit {
+            background: var(--highlight);
+            color: var(--primary);
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .sports-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--highlight);
+            border-bottom: 2px solid var(--highlight);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .sport-card {
+            background-color: var(--accent);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .sport-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sport-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        
+        .sport-card h3 {
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .aviator-section {
+            background-color: var(--accent);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .aviator-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .aviator-demo {
+            flex: 1;
+            height: 300px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .aviator-plane {
+            position: absolute;
+            left: 50px;
+            transition: left 3s linear;
+        }
+        
+        .aviator-info {
+            flex: 1;
+        }
+        
+        .aviator-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--highlight);
+        }
+        
+        .aviator-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .payment-methods {
+            margin-bottom: 3rem;
+        }
+        
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .payment-card {
+            background-color: var(--accent);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        
+        .payment-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .payment-card img {
+            width: 80px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--accent);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--text);
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--highlight);
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                margin: 1rem 0;
+            }
+            
+            .aviator-container {
+                flex-direction: column;
+            }
+        }
+        
