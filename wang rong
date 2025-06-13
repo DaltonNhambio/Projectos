@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Wang Rong International Traiding, Lda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a76b7; /* Azul do ceu */
+            color: #FFFFFF;
+        }
+        
+        header {
+            background-color: #851919; /* Vermelho mais escuro */
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #277e7c; /* Amarelo para contraste */
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .slogan {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        .localizacao {
+            background-color: #C62828;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .secao {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #79ff3b25;
+        }
+        
+        .secao-titulo {
+            color: #3b3bff;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .produto {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .produto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #FFEB3B;
+        }
+        
+        .produto img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .produto-nome {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .produto-preco {
+            color: #D50000;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .produto-preco-promocao {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .destaque {
+            background-color: #FFEB3B;
+            color: #D50000;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        footer {
+            background-color: #B71C1C;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 5px solid #FFEB3B;
+        }
+        
+        .contato {
+            margin-bottom: 15px;
+        }
+        
+        .horario {
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .produtos {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SUPERMERCADO WANG RONG</div>
+        <div class="slogan">Qualidade e preço baixo todos os dias!</div>
+    </header>
+    
+    <div class="localizacao">
+        Localização: Balate 2, próximo ao município
+    </div>
+    
+    <div class="container">
+        <section class="secao">
+            <h2 class="secao-titulo">PROMOÇÕES IMPERDÍVEIS</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Arroz+5kg" alt="Arroz 5kg">
+                    <div class="produto-nome">Arroz Tipo 1 5kg</div>
+                    <div class="produto-preco">R$ 18,99</div>
+                    <div class="produto-preco-promocao">De: R$ 24,99</div>
+                    <span class="destaque">-24%</span>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Óleo+Soja" alt="Óleo de Soja">
+                    <div class="produto-nome">Óleo de Soja 900ml</div>
+                    <div class="produto-preco">R$ 4,49</div>
+                    <div class="produto-preco-promocao">De: R$ 5,99</div>
+                    <span class="destaque">-25%</span>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Café+500g" alt="Café 500g">
+                    <div class="produto-nome">Café Torrado 500g</div>
+                    <div class="produto-preco">R$ 9,99</div>
+                    <div class="produto-preco-promocao">De: R$ 12,50</div>
+                    <span class="destaque">-20%</span>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Leite+1L" alt="Leite 1L">
+                    <div class="produto-nome">Leite Integral 1L</div>
+                    <div class="produto-preco">R$ 3,29</div>
+                    <div class="produto-preco-promocao">De: R$ 3,99</div>
+                    <span class="destaque">-18%</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="secao">
+            <h2 class="secao-titulo">PRODUTOS ALIMENTARES</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Feijão+1kg" alt="Feijão 1kg">
+                    <div class="produto-nome">Feijão Carioca 1kg</div>
+                    <div class="produto-preco">R$ 7,99</div>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Açúcar+5kg" alt="Açúcar 5kg">
+                    <div class="produto-nome">Açúcar Refinado 5kg</div>
+                    <div class="produto-preco">R$ 15,49</div>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Macarrão" alt="Macarrão">
+                    <div class="produto-nome">Macarrão Espaguete 500g</div>
+                    <div class="produto-preco">R$ 3,29</div>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Farina+1kg" alt="Farinha 1kg">
+                    <div class="produto-nome">Farinha de Trigo 1kg</div>
+                    <div class="produto-preco">R$ 4,19</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="secao">
+            <h2 class="secao-titulo">ELETRODOMÉSTICOS</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Fogão" alt="Fogão">
+                    <div class="produto-nome">Fogão 4 Bocas</div>
+                    <div class="produto-preco">R$ 899,00</div>
+                    <span class="destaque">12x R$ 74,92</span>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Geladeira" alt="Geladeira">
+                    <div class="produto-nome">Geladeira Frost Free</div>
+                    <div class="produto-preco">R$ 2.199,00</div>
+                    <span class="destaque">10% à vista</span>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Microondas" alt="Microondas">
+                    <div class="produto-nome">Microondas 20L</div>
+                    <div class="produto-preco">R$ 429,00</div>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Liquidificador" alt="Liquidificador">
+                    <div class="produto-nome">Liquidificador Turbo</div>
+                    <div class="produto-preco">R$ 129,90</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="secao">
+            <h2 class="secao-titulo">LOUÇAS E UTENSÍLIOS</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Jogo+Prato" alt="Jogo de Pratos">
+                    <div class="produto-nome">Jogo de Pratos 12 peças</div>
+                    <div class="produto-preco">R$ 89,90</div>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Panela" alt="Panela">
+                    <div class="produto-nome">Panela de Pressão</div>
+                    <div class="produto-preco">R$ 129,00</div>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Jogo+Copos" alt="Jogo de Copos">
+                    <div class="produto-nome">Jogo de Copos 6 unidades</div>
+                    <div class="produto-preco">R$ 39,90</div>
+                </div>
+                
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200?text=Facas" alt="Jogo de Facas">
+                    <div class="produto-nome">Jogo de Facas 6 peças</div>
+                    <div class="produto-preco">R$ 59,90</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="contato">
+            <p>Telefone: (+258) 869228001 | WhatsApp: (+258) 878358456</p>
+            <p>Email: contato@wangrong1481@gmail.com</p>
+        </div>
+        <div class="horario">
+            <p>Horário de Funcionamento: Segunda a Sábado das 8h às 20h | Domingo das 8h às 13h</p>
+        </div>
+        <p>Supermercado Wang Rong © 2023 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
