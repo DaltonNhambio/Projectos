@@ -1,0 +1,153 @@
+index
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>258Bets - Apostas Esportivas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">258<span>Bets</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Aviator</a></li>
+                <li><a href="#">Cassino</a></li>
+                <li><a href="#">Promoções</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button class="btn btn-login">Login</button>
+            <button class="btn btn-register">Registrar</button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Bem-vindo à 258Bets</h1>
+            <p>A casa de apostas líder em Moçambique com as melhores odds e promoções exclusivas</p>
+            <button class="btn btn-deposit">Depositar Agora</button>
+        </section>
+        
+        <section class="sports-section">
+            <h2 class="section-title">Esportes Populares</h2>
+            <div class="sports-grid">
+                <div class="sport-card">
+                    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e" alt="Futebol">
+                    <h3>Futebol</h3>
+                </div>
+                <div class="sport-card">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc" alt="Basquete">
+                    <h3>Basquete</h3>
+                </div>
+                <div class="sport-card">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018" alt="Tênis">
+                    <h3>Tênis</h3>
+                </div>
+                <div class="sport-card">
+                    <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da" alt="Vôlei">
+                    <h3>Vôlei</h3>
+                </div>
+                <div class="sport-card">
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5" alt="Boxe">
+                    <h3>Boxe</h3>
+                </div>
+                <div class="sport-card">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018" alt="Futebol Americano">
+                    <h3>Futebol Americano</h3>
+                </div>
+            </div>
+        </section>
+        
+        <section class="aviator-section">
+            <h2 class="section-title">Aviator</h2>
+            <div class="aviator-container">
+                <div class="aviator-demo">
+                    <div class="aviator-plane">✈️</div>
+                </div>
+                <div class="aviator-info">
+                    <h2>O jogo mais emocionante!</h2>
+                    <p>Aposte no Aviator e veja seu multiplicador subir como um avião. Retire seu ganho antes que o avião decole e você perca tudo!</p>
+                    <p>Odds de até 100x disponíveis!</p>
+                    <button class="btn btn-deposit">Jogar Aviator</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="payment-methods">
+            <h2 class="section-title">Métodos de Depósito</h2>
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/1200px-M-PESA_LOGO-01.svg.png" alt="M-Pesa">
+                    <h3>M-Pesa</h3>
+                </div>
+                <div class="payment-card">
+                    <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="eMola">
+                    <h3>eMola</h3>
+                </div>
+                <div class="payment-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png" alt="Cartão de Crédito">
+                    <h3>Cartão de Crédito</h3>
+                </div>
+                <div class="payment-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" alt="Bitcoin">
+                    <h3>Bitcoin</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Termos de Serviço</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Ajuda</a>
+            <a href="#">Contato</a>
+        </div>
+        <p class="copyright">© 2025 258Bets. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        // Aviator game demo animation
+        const aviatorDemo = document.querySelector('.aviator-demo');
+        const aviatorPlane = document.querySelector('.aviator-plane');
+        
+        function animateAviator() {
+            aviatorPlane.style.left = '50px';
+            setTimeout(() => {
+                aviatorPlane.style.left = 'calc(100% - 70px)';
+            }, 100);
+        }
+        
+        // Reset animation every 4 seconds
+        setInterval(() => {
+            animateAviator();
+        }, 4000);
+        
+        // Initial animation
+        animateAviator();
+        
+        // Sports cards click event
+        const sportCards = document.querySelectorAll('.sport-card');
+        sportCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const sportName = card.querySelector('h3').textContent;
+                alert(`Você selecionou ${sportName}. Redirecionando para as apostas...`);
+            });
+        });
+        
+        // Payment methods click event
+        const paymentCards = document.querySelectorAll('.payment-card');
+        paymentCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const methodName = card.querySelector('h3').textContent;
+                alert(`Você selecionou ${methodName} como método de depósito.`);
+            });
+        });
+    </script>
+</body>
+</html>
