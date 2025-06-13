@@ -1,0 +1,193 @@
+<h1><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABMMusic - Baixe suas músicas favoritas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #1DB954;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .search-box {
+            display: flex;
+            margin: 30px 0;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        
+        .search-box button {
+            padding: 12px 20px;
+            background-color: #1DB954;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .search-box button:hover {
+            background-color: #1ed760;
+        }
+        
+        .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .music-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .music-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .music-card img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        
+        .music-card h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .music-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #1DB954;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .download-btn:hover {
+            background-color: #1ed760;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #333;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .results {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MusicDown</h1>
+            <p>Baixe suas músicas favoritas em alta qualidade</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Digite o nome da música ou artista...">
+            <button id="search-btn">Buscar</button>
+        </div>
+        
+        <div class="results" id="results">
+            <!-- Exemplo de cards de música -->
+            <div class="music-card">
+                <img src="https://via.placeholder.com/300" alt="Capa do Álbum">
+                <h3>Nome da Música</h3>
+                <p>Artista</p>
+                <p>Álbum • Ano</p>
+                <a href="#" class="download-btn">Baixar MP3</a>
+            </div>
+            
+            <div class="music-card">
+                <img src="https://via.placeholder.com/300" alt="Capa do Álbum">
+                <h3>Outra Música</h3>
+                <p>Outro Artista</p>
+                <p>Álbum Diferente • Ano</p>
+                <a href="#" class="download-btn">Baixar MP3</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>ABMMusic &copy; 2025 - Song da boa cena</p>
+            <p><small>Melhor companhia com a sua musica.</small></p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('search-btn').addEventListener('click', function() {
+            const query = document.getElementById('search-input').value.trim();
+            if(query) {
+                // Em uma aplicação real, aqui você faria uma requisição para um backend
+                alert(`Busca por: "${query}"\nEm uma aplicação real, isso buscaria no banco de dados.`);
+                
+                // Simulação de carregamento
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = '<p>Carregando resultados...</p>';
+                
+                // Simulação de resposta após 1 segundo
+                setTimeout(() => {
+                    resultsDiv.innerHTML = `
+                        <div class="music-card">
+                            <img src="https://via.placeholder.com/300" alt="Capa do Álbum">
+                            <h3>${query}</h3>
+                            <p>Artista Encontrado</p>
+                            <p>Álbum • 2023</p>
+                            <a href="#" class="download-btn">Baixar MP3</a>
+                        </div>
+                    `;
+                }, 1000);
+            } else {
+                alert('Por favor, digite algo para buscar.');
+            }
+        });
+    </script>
+</body>
+</html></h1>
